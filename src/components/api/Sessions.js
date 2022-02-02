@@ -1,4 +1,4 @@
-const sessions = [];
+const sessions = require("./Sessions.json");
 
 function getSessions() {
     return sessions;

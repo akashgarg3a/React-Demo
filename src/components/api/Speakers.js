@@ -1,6 +1,4 @@
-
-
-const speakers = [];
+const speakers = require("./Speakers.json");
 function getSpeakers() {
     return speakers;
 }
