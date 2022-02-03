@@ -1,5 +1,6 @@
 import React from "react";
 import PropTyes from "prop-types";
+import { Link } from "react-router-dom";
 
 function SpeakerList(props) {
     return (
@@ -20,7 +21,9 @@ function SpeakerList(props) {
                 { props.speakers.map(speaker => {
                     return (
                         <tr key={speaker.speaker_id}>
-                            <td>{speaker.speaker_id}</td>
+                            <td>
+                                <Link to={"/speaker/" + speaker.speaker_id}>{speaker.speaker_id}</Link>
+                            </td>
                             <td>{speaker.first_name}</td>
                             <td>{speaker.last_name}</td>
                             <td>{speaker.title}</td>

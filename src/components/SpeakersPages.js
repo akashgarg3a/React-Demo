@@ -1,9 +1,10 @@
 import React, { useState, useEffect }  from "react";
-import getSpeakers from "./api/Speakers";
+import { getSpeakers } from "./api/Speakers";
 import SpeakerList from "./SpeakerList";
+
 function CoursesPage() {
     
-    const [ speakers, setSpeakers] = useState([])
+    const [ speakers, setSpeakers] = useState([]);
     
     useEffect( () => {
         setSpeakers(getSpeakers);
