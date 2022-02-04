@@ -3,7 +3,7 @@ import { getSpeakerById }  from "./api/Speakers";
 const ManageSpeakerPage = props => {
 
     const [speaker, setSpeaker] = useState({
-        speaker_id: '',
+        speaker_id: null,
         first_name: "",
         last_name: "",
         title: "",

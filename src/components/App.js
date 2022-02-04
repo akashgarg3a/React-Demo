@@ -6,6 +6,7 @@ import SpeakersPage from "./SpeakersPages";
 import { Route, Switch, Redirect } from "react-router-dom";
 import NotFoundPage from "./NotFoundPage";
 import ManageSpeakerPage from "./ManageSpeakerPage";
+import AddSpeakerPage from "./AddSpeakerPage";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/About" exact component={AboutPage}></Route>
                 <Route path="/Speakers" component={SpeakersPage}></Route>
                 <Route path="/Speaker/:id" component={ManageSpeakerPage}></Route>
+                <Route path="/Speaker" component={AddSpeakerPage}></Route>
                 <Redirect from="/about-page" to="/about"/>
                 <Route component={NotFoundPage} />
             </Switch>
