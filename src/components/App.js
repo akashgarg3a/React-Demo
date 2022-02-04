@@ -7,10 +7,13 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import NotFoundPage from "./NotFoundPage";
 import ManageSpeakerPage from "./ManageSpeakerPage";
 import AddSpeakerPage from "./AddSpeakerPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
     return (
         <div className="contaner-fluid">
+            <ToastContainer autoClose={3000} hideProgressBar />
             <Header />
             <Switch>
                 <Route path="/" exact component={HomePage}></Route>

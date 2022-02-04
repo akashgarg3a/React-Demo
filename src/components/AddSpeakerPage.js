@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SpeakerForm from "./SpeakerForm";
 import { saveSpeaker } from "./api/Speakers";
+import { toast } from "react-toastify";
 
 const AddSpeakerPage = props => {
     const [speaker, setSpeaker] = useState({
@@ -22,6 +23,7 @@ const AddSpeakerPage = props => {
         event.preventDefault();
         saveSpeaker(speaker);
         props.history.push("/speakers");
+        toast.success('Speaker Added.');
     }
     return (
         <>
