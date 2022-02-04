@@ -3,7 +3,7 @@ import TextInput from "./common/TextInput";
 
 function SpeakerForm(props) {
     return (
-        <form>
+        <form onSubmit={props.onSubmit}>
             <TextInput
                 id="first_name"
                 label="first_name"

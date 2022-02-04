@@ -8,4 +8,10 @@ function getSpeakerById(id) {
     return speakers[id];
 }
 
-export { getSpeakerById, getSpeakers};
+function  saveSpeaker(speaker) {
+    speaker.speaker_id = speakers.length + 1;
+    speaker.speaker_photo = null;
+    speakers.push(speaker);
+}
+
+export { getSpeakerById, getSpeakers, saveSpeaker};
