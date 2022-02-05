@@ -20,7 +20,7 @@ function TextInput(props) {
                     value={props.value}
                 />
             </div>
-            {props.error && <div className="alert alert-danger">{props.error}</div>}
+            {props.error.length > 0 && <div className="alert alert-danger">{props.error}</div>}
         </div>
     );
 }
